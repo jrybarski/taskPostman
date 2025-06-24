@@ -1,0 +1,12 @@
+{
+  "name": "taskpostman",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "api-tests": "newman run ./Booker.postman_collection.json -e ./Booking.postman_environment.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
