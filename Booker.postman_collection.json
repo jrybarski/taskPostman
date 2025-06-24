@@ -247,7 +247,11 @@
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(201);\r",
-									"});"
+									"});\r",
+									"pm.test(\"Response body is one of the expected values\", function () {\r",
+									"    pm.expect(pm.response.text()).to.be.oneOf([\"\", \"Created\"]);\r",
+									"});\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
@@ -275,7 +279,12 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": ""
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
 							"raw": "{{url}}booking/{{bookingid}}",
